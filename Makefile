@@ -1,4 +1,4 @@
-FFLAGS = -O2 -malign-double # -Minfo=ftn -Minform=inform # 
+FFLAGS = -O1 # -malign-double # -Minfo=ftn -Minform=inform # 
 #DBGFLAGS = -C -g # -pedantic -std=f2003
 # intel flags
 #FFLAGS = -f77rtl    -m64
@@ -6,9 +6,9 @@ FFLAGS = -O2 -malign-double # -Minfo=ftn -Minform=inform #
 #DBGFLAGS = -debug extended,emit-colum  -ftrapuv -g3  
 # pgi flags
 #  -Minfo=ftn -Minform=inform -help=debug|language
-#FC 	= ifort  # intel compiler
+FC 	= ifort  # intel compiler
 #FC      = pgfortran # pgi compiler
-FC      = gfortran 
+#FC      = gfortran 
 OBJS 	= tcdriver-for9s.o 
 
 run-tc:		${OBJS} 

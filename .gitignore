@@ -1,0 +1,9 @@
+ausdem9s.bin
+input
+output
+*.o
+run-tc
+tcdriver.rep
+*.ary
+
+
