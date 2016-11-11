@@ -1,7 +1,7 @@
 ####### gnu- gfortran comiler and compiler flag options.
 FC      = gfortran 
 FFLAGS = -O1 # -malign-double # -Minfo=ftn -Minform=inform # 
-DBGFLAGS = -C -g # -std=f2003 # -pedantic -std=f2003
+DBGFLAGS = -C -g # -std=f2003 # -pedantic 
 
 ##### intel compiler and compiler flag options
 #FC 	= ifort  # intel compiler
@@ -15,7 +15,8 @@ DBGFLAGS = -C -g # -std=f2003 # -pedantic -std=f2003
 #FFLAGS = -Mstandard
 
 #  object list
-OBJS 	= tc_variables.o tc2dftpl.o tc2dkmpm.o dtdz_2d2.o iftafb.o fft3d.o fftcc.o tcdriver.o 
+OBJS 	= tc_variables.o tc2dftpl.o tc2dkmpm.o dtdz_2d2.o iftafb.o \
+	fft3d.o fftcc.o tcdriver.o 
 
 run-tc:		${OBJS} 
 	${FC} ${DBGFLAGS} ${FFLAGS} -o  $@ ${OBJS}
