@@ -16,7 +16,7 @@ DBGFLAGS = -C -g # -std=f2003 # -pedantic
 
 #  object list
 OBJS 	= tc_variables.o tc2dftpl.o tc2dkmpm.o dtdz_2d2.o iftafb.o \
-	fft3d.o fftcc.o tcdriver.o 
+	fft3d.o fftcc.o tc_driver.o 
 
 run-tc:		${OBJS} 
 	${FC} ${DBGFLAGS} ${FFLAGS} -o  $@ ${OBJS}
@@ -24,7 +24,7 @@ run-tc:		${OBJS}
 tc_variables.o:	tc_variables.f90
 	${FC} ${DBGFLAGS} ${FFLAGS} -c $?
 
-tcdriver.o:	tcdriver.f90
+tc_driver.o:	tc_driver.f90
 	${FC} ${DBGFLAGS} ${FFLAGS} -c $?
 
 tc2dftpl.o: 	tc2dftpl.f90
@@ -40,6 +40,9 @@ fft3d.o: 	fft3d.f90
 	${FC} ${DBGFLAGS} ${FFLAGS} -c $?
 
 fftcc.o:	fftcc.f90
+	${FC} ${DBGFLAGS} ${FFLAGS} -c $?
+
+iftafb.o:	iftafb.f90
 	${FC} ${DBGFLAGS} ${FFLAGS} -c $?
 
 clean:
